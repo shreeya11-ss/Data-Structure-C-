@@ -13,7 +13,6 @@ void delete_begin();
 void delete_random();
 void delete_end();
 void display();
-void search();
 void main()
 {
     int x;

@@ -89,7 +89,7 @@ void display()
     }
     else
     {
-        for (int i=0; i<=s.t; i++)
+        for (int i=s.t; i>=1; i--)
         {
             printf("%d\n",s.arr[i]);
         }

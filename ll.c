@@ -3,7 +3,7 @@
 struct list
 {
     int data;
-    int *next;
+    struct list *next;
 };
 struct list *head;
 void insert_begin();

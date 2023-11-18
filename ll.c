@@ -5,7 +5,6 @@ struct list
     int data;
     int *next;
 };
-int count=10;
 struct list *head;
 void insert_begin();
 void insert_random();
@@ -111,7 +110,7 @@ void insert_random()
     node = (struct list *)malloc(sizeof(struct list));
     node->data = p;
     node->next = NULL;
-    if (pos > count)
+    if (pos < 0)
     {
         printf("invalid position");
     }

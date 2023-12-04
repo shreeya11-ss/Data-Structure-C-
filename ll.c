@@ -13,13 +13,14 @@ void delete_begin();
 void delete_random();
 void delete_end();
 void display();
+void reverse();
 void main()
 {
     int x;
     head = NULL;
     while (1)
     {
-        printf("1.insert at front\n2.Insert at random\n3.insert at end\n4.delete at front\n5.delete at random\n6.delete at end\n7.display\n");
+        printf("1.insert at front\n2.Insert at random\n3.insert at end\n4.delete at front\n5.delete at random\n6.delete at end\n7.display\n8.reverse\n");
         printf("choice:");
         scanf("%d", &x);
         switch (x)
@@ -44,6 +45,9 @@ void main()
             break;
         case 7:
             display();
+            break;
+        case 8:
+            reverse();
             break;
         
         default:
@@ -188,7 +192,6 @@ void display(){
     temp=head;
     if(temp==NULL){
         printf("lis is empty\n");
-
     }
     else{
         printf("elements in the list are:\n");
@@ -196,8 +199,17 @@ void display(){
             printf(" [%d | %p] ",temp->data,temp->next);
             temp=temp->next;
         }
-
     }
-    
-
+}
+void reverse(){
+    struct list *temp,*prev,*temp2;
+    prev=NULL;
+    temp=temp2=head;
+    while(temp2!=NULL){
+        temp2=temp2->next;
+        temp->next=prev;
+        prev=temp;
+        temp=temp2;
+    }
+    head=prev;
 }

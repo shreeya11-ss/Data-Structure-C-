@@ -2,8 +2,6 @@
 int main(){
     int arr[]={45,90,23,56,12,6};
     int size=sizeof(arr)/sizeof(arr[0]);
-    int comp=0;
-    int swap=0;
     for(int i=1;i<size;i++){
         int key=arr[i];
         int j;
